@@ -38,7 +38,7 @@ function spawnImage() {
 
     // Add click event to alert message
     img.addEventListener("click", function () {
-        alert("oof! mamamia!");
+        alert("zoo! wee! mama!");
         window.location.href = '../pages/' + next_page + ".html";
     });
 

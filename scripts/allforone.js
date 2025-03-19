@@ -16,3 +16,14 @@ function selectAnswer(answerValue, answerText) {
       window.location.href = "../index.html";
     }
 }
+
+function checkgate(guess) {
+    cleaner = guess.toLowerCase().replace(/[^a-zA-Z]/g, "");
+    equal = correctAnswer === cleaner;
+    if(equal) {
+        alert("that is correct!");
+        window.location.href = '../pages/' + next_page + ".html";
+    } else {
+        alert("that is incorrect please try again")
+    }
+}
