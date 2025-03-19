@@ -17,6 +17,8 @@ function selectAnswer(answerValue, answerText) {
     }
 }
 
+var retries = 20
+
 function checkgate(guess) {
     cleaner = guess.toLowerCase().replace(/[^a-zA-Z]/g, "");
     equal = correctAnswer === cleaner;
@@ -24,6 +26,13 @@ function checkgate(guess) {
         alert("that is correct!");
         window.location.href = '../pages/' + next_page + ".html";
     } else {
-        alert("that is incorrect please try again")
+        retries -= 1;
+        resp = "";
+        if(retries <= 0) {
+            resp = "bruh u really had to, its: tourniquet"
+        }else {
+            resp = "that is incorrect please try again " + retries + " more attempts before i just tell you the answer"
+        }
+        alert(resp);
     }
 }
